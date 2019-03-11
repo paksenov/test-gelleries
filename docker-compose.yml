@@ -1,0 +1,28 @@
+version: '2'
+services:
+
+  php:
+    build: ./docker/php/
+    volumes:
+      - ./app:/var/www/html
+    working_dir: /var/www/html
+
+  db:
+    image: mariadb
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+
+    volumes:
+      - ./docker/db.conf.d:/etc/mysql/mariadb.conf.d
+      - ./app/db/data:/var/www/data
+#    ports:
+#      - 3306:3306
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    environment:
+     - PMA_ARBITRARY=1
+    ports:
+     - 8099:80
+    volumes:
+     - /sessions

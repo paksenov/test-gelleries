@@ -1,0 +1,8 @@
+{
+    "require": {
+        "robmorgan/phinx": "^0.10.6"
+    },
+    "require-dev": {
+        "jetbrains/phpstorm-stubs": "^2018.1"
+    }
+}

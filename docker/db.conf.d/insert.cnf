@@ -1,0 +1,7 @@
+[mysqld]
+innodb_buffer_pool_size = 5G
+innodb_log_file_size  = 1G
+innodb_flush_log_at_trx_commit = 0
+sync_binlog = 0
+innodb_doublewrite = 0
+innodb_log_checksums = 0

@@ -1,0 +1,1 @@
+LOAD DATA INFILE '/var/www/data/image.csv' INTO TABLE test.image FIELDS TERMINATED BY ',' ENCLOSED BY '\"' LINES TERMINATED BY '\n';

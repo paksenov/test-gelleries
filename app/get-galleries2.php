@@ -9,7 +9,9 @@ $db_name = 'test';
 
 $dbh = new PDO("mysql:dbname=$db_name;host=$db_host", $db_user, $db_pass);
 
-$sth = $dbh->prepare('SELECT id, name FROM gallery ORDER BY id desc LIMIT 100', [PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL]);
+$sql = 'SELECT id, name FROM gallery ORDER BY id DESC LIMIT 100';
+
+$sth = $dbh->prepare($sql, [PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL]);
 $sth->execute();
 
 $sql_images = [];

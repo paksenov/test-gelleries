@@ -8,7 +8,10 @@
 ```
 
 ```
-    docker-compose run --rm php php get-galleries.php
+    docker-compose run --rm php php get-galleries.php # (((
+    docker-compose run --rm php php get-galleries2.php # :|
+    docker-compose run --rm php php get-galleries3.php # :)
+    docker-compose run --rm php php get-galleries4.php # ;)
 ```
 
 ```
